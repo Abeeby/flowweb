@@ -8,11 +8,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'flow': {
-          'green': '#4CAF50',
-          'dark': '#1E3A34',
-          'light': '#E9F7EF',
-        },
+        flowGreen: '#4CAF50',
+        flowDark: '#1E3A34',
+        flowLight: '#E9F7EF',
       },
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],
