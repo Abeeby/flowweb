@@ -17,48 +17,34 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
+  @apply font-display font-bold;
 }
 
-.hero-section {
-  background-color: var(--flow-green);
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
+@layer components {
+  .btn-primary {
+    @apply bg-flow-green text-white py-3 px-6 rounded-full text-lg font-semibold hover:bg-opacity-90 transition-all;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-6 text-flow-dark;
+  }
+  
+  .section-subtitle {
+    @apply text-xl text-gray-600 mb-10 max-w-3xl mx-auto;
+  }
 
-.hero-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 0;
-}
+  .hero-section {
+    @apply relative bg-flow-green bg-cover bg-center;
+  }
 
-.btn-primary {
-  background-color: var(--flow-green);
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 9999px;
-  font-size: 1.125rem;
-  font-weight: 600;
-  transition: all 0.2s;
-}
+  .hero-section::before {
+    content: '';
+    @apply absolute inset-0 bg-black bg-opacity-50 z-0;
+  }
 
-.btn-primary:hover {
-  opacity: 0.9;
-}
-
-.section-title {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  color: var(--flow-dark);
+  .image-placeholder {
+    @apply bg-gray-200 flex items-center justify-center text-gray-500 font-semibold;
+  }
 }
 
 @media (min-width: 768px) {
@@ -66,23 +52,4 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
-}
-
-.section-subtitle {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  color: #4b5563;
-  margin-bottom: 2.5rem;
-  max-width: 48rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.image-placeholder {
-  background-color: #e5e7eb;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #6b7280;
-  font-weight: 600;
 } 
