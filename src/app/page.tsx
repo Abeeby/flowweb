@@ -34,7 +34,7 @@ export default function Home() {
           <div className="text-center mb-12">
             <h2 className="text-2xl font-semibold text-gray-700 mb-2">Qui suis-je ?</h2>
             <h3 className="text-3xl md:text-4xl font-bold text-flow-dark">
-              Marc Dubois, <br />
+              Flo Rapin, <br />
               cuisinier de profession
             </h3>
           </div>
